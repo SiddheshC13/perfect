@@ -19,12 +19,12 @@ provider "azurerm" {
 
 variable "hi" {
   type = list
-default = ["HI","HELLO","BYE"]
+default = ["HI","HELLO","BYE","changed ok"]
 }
 
 resource "azurerm_resource_group" "example" {
   name     = var.hi[count.index]
-  location = "West Europe"
+  location = "eastus"
   count=3
 }
 
